@@ -1,0 +1,18 @@
+// map 辞書型 キーに対してそのキーに対する値が一セットになっている
+$breakpoint:(
+    sp:'screen and (max-width:599px)',
+    tab:'screen and (max-width:1024px)',
+    pc:'screen and (min-width:1025px)',
+);
+
+// mqというmixinを定義した! mqが呼び出されると@mediaが出てきて、CSSファイル内にブレイクポイントを記述する
+// scssでは一枚のCSSの中にメディアクエリの設定（@media）を記述していく
+// map-get関数の中で指定したブレイクポイントマップを呼び出す。キーと値がセットになっているので
+// 第二引数$size
+// @content データの流れを確認しておけ！
+@mixin mq($size){
+    @media #{map-get($breakpoint, $size)}{
+        @content
+    }
+}
+
