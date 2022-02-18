@@ -1444,20 +1444,29 @@ li {
   background-color: #E0E0E0;
   margin: 12px 5px;
   line-height: 1.5;
+  position: relative;
 }
 @media screen and (max-width:599px) {
   .formpage-right__wert {
     width: 100%;
     margin: 0px 20px 12px 5px;
+    height: 1.5em;
   }
 }
-.formpage-right__wert input[type=text] {
-  width: 20.8em;
+.formpage-right__wert .text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   font-family: "Noto Sans JP";
 }
-.formpage-right__wert input[type=textarea] {
-  width: 21em;
-  height: 9em;
+.formpage-right__wert .textarea {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   line-height: 1.5;
   font-family: "Noto Sans JP";
 }
